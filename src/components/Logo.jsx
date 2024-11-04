@@ -1,10 +1,10 @@
 import React from 'react'
-import LogoImg from "../assets/logo.AVIF"
+import LogoImg from "../assets/logo.png"
 
 const Logo = () => {
   return (
     <>
-    <img src={LogoImg} className='h-16 md:cursor-pointer '/>
+    <img src={LogoImg} className='h-full md:cursor-pointer '/>
     </>
   )
 }
