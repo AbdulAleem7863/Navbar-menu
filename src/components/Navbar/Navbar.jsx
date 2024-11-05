@@ -5,6 +5,8 @@ import NavLinks from './NavLinks';
 import Button from '../Button';
 import { FiMenu } from "react-icons/fi";
 import { IoMdClose } from "react-icons/io";
+import LoginBtn from '../LoginBtn';
+import SignupBtn from '../SignupBtn';
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -19,8 +21,8 @@ const Navbar = () => {
         {/* Logo and Menu Icon */}
         <div className='z-50 h-[19vh] md:w-auto w-full flex justify-between '>
           <Logo />
-          <div className='text-3xl md:hidden cursor-pointer' onClick={toggleMenu}>
-            {open ? <IoMdClose  /> : <FiMenu color='white' />}
+          <div className={`text-3xl absolute top-5 right-3  md:hidden cursor-pointer ${open?"text-black":"text-white"}`} onClick={toggleMenu}>
+            {open ? <IoMdClose   /> : <FiMenu  />}
           </div>
         </div>
 
@@ -33,8 +35,9 @@ const Navbar = () => {
         </ul>
 
         {/* Desktop Button */}
-        <div className='md:block hidden'>
-          <Button />
+        <div className='md:block hidden '>
+          <LoginBtn />
+          <SignupBtn/>
         </div>
 
         {/* Mobile Navigation Menu */}
@@ -44,7 +47,8 @@ const Navbar = () => {
           </li>
           <NavLinks />
           <div className='py-5'>
-            <Button />
+          <LoginBtn />
+          <SignupBtn/>
           </div>
         </ul>
       </div>

@@ -22,7 +22,7 @@ const NavLinks = () => {
             {links.map((link, index) => (
                 <div key={index}>
                     <div className='px-3 text-left md:cursor-pointer group'>
-                        <h1 className='py-7 text-white flex justify-between items-center md:pr-0 pr-5 group'
+                        <h1 className='py-7 md:text-white text-black flex justify-between items-center md:pr-0 pr-5 group'
                             onClick={() => handleHeadingClick(link.name)}>
                             {link.name}
                             <span className='text-xl md:hidden inline'>
