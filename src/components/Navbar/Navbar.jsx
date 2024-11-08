@@ -1,8 +1,8 @@
 
+
 import React, { useState } from 'react';
 import Logo from '../Logo';
 import NavLinks from './NavLinks';
-import Button from '../Button';
 import { FiMenu } from "react-icons/fi";
 import { IoMdClose } from "react-icons/io";
 import LoginBtn from '../LoginBtn';
@@ -16,6 +16,7 @@ const Navbar = () => {
   };
 
   return (
+    <>
     <nav className='bg-[#000000] transition-all duration-500 h-[10vh] opacity-85 hover:opacity-100 '>
       <div className='flex items-center font-medium justify-around h-full'>
         {/* Logo and Menu Icon */}
@@ -29,30 +30,31 @@ const Navbar = () => {
         {/* Desktop Navigation Links */}
         <ul className='md:flex hidden uppercase items-center gap-8'>
           <li className='list-none'>
-            <a href="/" className='py-7 px-3 inline-block text-white'>Home</a>
+            <a href="/" className='py-7 px-3 md:text-sm inline-block text-white'>Home</a>
           </li>
           <NavLinks />
         </ul>
 
         {/* Desktop Button */}
-        <div className='md:block hidden '>
+        <div className='md:flex md:items-center md:justify-center  hidden '>
           <LoginBtn />
           <SignupBtn/>
         </div>
 
         {/* Mobile Navigation Menu */}
-        <ul className={`md:hidden bg-white text-black absolute h-full w-full bottom-0 py-24 pl-4 transition-all duration-500 ${open ? "left-0" : "left-[-100%]"}`}>
+        <ul className={`md:hidden bg-white text-black absolute h-full overflow-y-auto w-full bottom-0 py-24 pl-4 transition-all duration-500 ${open ? "left-0" : "left-[-100%]"}`}>
           <li className='list-none'>
-            <a href="/" className='py-7 px-3 inline-block'>Home</a>
+            <a href="/" className='py-7  px-3 inline-block'>Home</a>
           </li>
           <NavLinks />
-          <div className='py-5'>
+          <div className='py-5 flex  items-center justify-start'>
           <LoginBtn />
           <SignupBtn/>
           </div>
         </ul>
       </div>
     </nav>
+    </>
   );
 };
 

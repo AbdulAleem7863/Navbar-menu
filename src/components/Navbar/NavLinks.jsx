@@ -21,7 +21,7 @@ const NavLinks = () => {
         <>
             {links.map((link, index) => (
                 <div key={index}>
-                    <div className='px-3 text-left md:cursor-pointer group'>
+                    <div className='px-3 md:text-sm text-left md:cursor-pointer group'>
                         <h1 className='py-7 md:text-white text-black flex justify-between items-center md:pr-0 pr-5 group'
                             onClick={() => handleHeadingClick(link.name)}>
                             {link.name}
@@ -41,7 +41,7 @@ const NavLinks = () => {
                                 <div className='bg-white p-5 grid grid-cols-3 gap-10'>
                                     {link.sublinks.map((mysublinks, subIndex) => (
                                         <div key={subIndex}>
-                                            <h1 className='text-lg font-semibold text-black'>{mysublinks.Head}</h1>
+                                            <h1 className='text-lg md:text-base font-semibold text-black'>{mysublinks.Head}</h1>
                                             {mysublinks.sublink.map((slink, subLinkIndex) => (
                                                 <li key={subLinkIndex} className='text-sm my-2.5 text-black'>
                                                     <a href={slink.link} className='hover:text-[#7a6d29]'>{slink.name}</a>

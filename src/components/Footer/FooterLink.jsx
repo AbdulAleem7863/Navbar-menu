@@ -3,7 +3,7 @@ import { footerLinks } from './FootLinks'
 
 const FooterLink = () => {
   return (
-    <div className=" flex  text-white flex-col md:flex-row gap-16 w-full justify-center md:items-start  ">
+    <div className=" flex  text-white flex-col md:flex-row gap-5 md:-ml-28 md:gap-16 w-full justify-center md:items-start  ">
 
     {footerLinks.map((footlink,i) => (
       <div key={i} className="flex flex-col justify-between h-full items-center  ">
